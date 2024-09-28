@@ -41,7 +41,6 @@ app.use('/users', usersRouter);
 app.use('/addcalories', addcaloriesRouter);
 app.use('/about', aboutRouter);
 app.use('/report', reportRouter);
-app.use('/services', servicesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
