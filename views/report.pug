@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to your calorie report for #{month}/#{year}
+
+  if report.breakfast.length > 0
+    h2 Breakfast
+    ul
+      each item in report.breakfast
+        li #{item.day}: #{item.description} - #{item.amount} calories
+  else
+    p No breakfast entries for this month.
+
+  if report.lunch.length > 0
+    h2 Lunch
+    ul
+      each item in report.lunch
+        li #{item.day}: #{item.description} - #{item.amount} calories
+  else
+    p No lunch entries for this month.
+
+  if report.dinner.length > 0
+    h2 Dinner
+    ul
+      each item in report.dinner
+        li #{item.day}: #{item.description} - #{item.amount} calories
+  else
+    p No dinner entries for this month.
+
+  if report.other.length > 0
+    h2 Other Meals
+    ul
+      each item in report.other
+        li #{item.day}: #{item.description} - #{item.amount} calories
+  else
+    p No other meal entries for this month.

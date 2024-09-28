@@ -1,0 +1,36 @@
+http://localhost:3000
+
+testing getting the about
+-------------------------
+url=http://localhost:3000/about/
+data.status_code=200
+b'[{"firstname":"Gal","lastname":"Natan","id":205890569,"email":"Gal.natan10@gmail.com"},{"firstname":"Eliran","lastname":"Kotzero","id":316040120,"email":"eliran4142@gmail.com"},{"firstname":"Mattan","lastname":"Ben Yosef","id":318360351,"email":"matbeyo@gmail.com"}]'
+data.text=[{"firstname":"Gal","lastname":"Natan","id":205890569,"email":"Gal.natan10@gmail.com"},{"firstname":"Eliran","lastname":"Kotzero","id":316040120,"email":"eliran4142@gmail.com"},{"firstname":"Mattan","lastname":"Ben Yosef","id":318360351,"email":"matbeyo@gmail.com"}]
+[{'firstname': 'Gal', 'lastname': 'Natan', 'id': 205890569, 'email': 'Gal.natan10@gmail.com'}, {'firstname': 'Eliran', 'lastname': 'Kotzero', 'id': 316040120, 'email': 'eliran4142@gmail.com'}, {'firstname': 'Mattan', 'lastname': 'Ben Yosef', 'id': 318360351, 'email': 'matbeyo@gmail.com'}]
+firstname=Gal
+lastname=Natan
+id=205890569
+Gal Natan 205890569
+
+testing getting the report - 1
+------------------------------
+url=http://localhost:3000/report/?user_id=123123&year=2024&month=3
+data.status_code=200
+b'{"breakfast":[],"lunch":[],"dinner":[],"other":[]}'
+data.text={"breakfast":[],"lunch":[],"dinner":[],"other":[]}
+[]
+
+testing adding calorie consumption
+----------------------------------
+url=http://localhost:3000/addcalories/
+data.status_code=201
+b'{"user_id":"123123","year":2024,"month":4,"day":2,"id":1727452165013,"description":"milk 9","category":"lunch","amount":8,"_id":"66f6d3fe499cffc51c241d68"}'
+data.text={"user_id":"123123","year":2024,"month":4,"day":2,"id":1727452165013,"description":"milk 9","category":"lunch","amount":8,"_id":"66f6d3fe499cffc51c241d68"}
+
+testing getting the report - 2
+------------------------------
+url=http://localhost:3000/report/?user_id=123123&year=2024&month=4
+data.status_code=200
+b'{"breakfast":[],"lunch":[{"day":2,"description":"milk 9","amount":8},{"day":2,"description":"milk 9","amount":8},{"day":2,"description":"milk 9","amount":8}],"dinner":[],"other":[]}'
+data.text={"breakfast":[],"lunch":[{"day":2,"description":"milk 9","amount":8},{"day":2,"description":"milk 9","amount":8},{"day":2,"description":"milk 9","amount":8}],"dinner":[],"other":[]}
+[]
