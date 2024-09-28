@@ -14,7 +14,6 @@ const usersRouter = require('./routes/users');
 const addcaloriesRouter = require('./routes/addcalories');
 const aboutRouter = require('./routes/about');
 const reportRouter = require('./routes/report');
-const servicesRouter = require('./routes/services');
 const mongoose = require('mongoose');
 const mongoDBURI = 'mongodb+srv://galnat:Hummus2024@cluster0.gkzdu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; // Replace with your actual MongoDB URI
 mongoose.connect(mongoDBURI, {})
