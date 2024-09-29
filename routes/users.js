@@ -1,3 +1,7 @@
+// Gal Natan 205890569
+// Eliran Kotzero 316040120
+// Mattan Ben Yosef 318360351
+
 var express = require('express');
 var router = express.Router();
 const schemas = require('../models/schema');
@@ -23,19 +27,6 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-/* Get all users */
-// router.get('/', async (req, res) => {
-//   try {
-//     console.log('Route accessed');
-//     const users = await schemas.users.find({}); // Fetch all users from MongoDB
-//     if (users.length === 0) {
-//       return res.status(404).render('users', { message: 'No users found', users: [] });
-//     }
-//     res.render('users', { users }); // Pass users to the Pug template
-//   } catch (error) {
-//     console.error('Error retrieving users:', error);
-//     res.status(500).json({ error: 'Failed to retrieve users' });
-//   }
-// });
+
 
 module.exports = router;
