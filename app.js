@@ -1,19 +1,22 @@
-
 // Gal Natan 205890569
 // Eliran Kotzero 316040120
 // Mattan Ben Yosef 318360351
 
+// Importing required modules and setting up routers for different routes
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// Importing routers to handle specific paths in the application
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const addcaloriesRouter = require('./routes/addcalories');
 const aboutRouter = require('./routes/about');
 const reportRouter = require('./routes/report');
+
+// MongoDB setup: connecting to the database using Mongoose
 const mongoose = require('mongoose');
 const mongoDBURI = 'mongodb+srv://galnat:Hummus2024@cluster0.gkzdu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 mongoose.connect(mongoDBURI, {})
