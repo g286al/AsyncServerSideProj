@@ -15,7 +15,7 @@ const addcaloriesRouter = require('./routes/addcalories');
 const aboutRouter = require('./routes/about');
 const reportRouter = require('./routes/report');
 const mongoose = require('mongoose');
-const mongoDBURI = 'mongodb+srv://galnat:Hummus2024@cluster0.gkzdu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; // Replace with your actual MongoDB URI
+const mongoDBURI = 'mongodb+srv://galnat:Hummus2024@cluster0.gkzdu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 mongoose.connect(mongoDBURI, {})
   .then(() => console.log('MongoDB connected...'))
   .catch((err) => console.log('MongoDB connection error:', err));
